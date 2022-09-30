@@ -1,0 +1,14 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+# GET     /                           controllers.HomeController.index()
+
+
+# Shorten -> create, get -> direct back to original
+
+POST    /api/shorten                controllers.ShortenerController.create_short_url
+GET     /go/:short_url              controllers.ShortenerController.redirect(short_url: String)
+

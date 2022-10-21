@@ -11,3 +11,4 @@ Using scala, redis and postman.
 	-> create read me (medium) + deploy (aws)
     -> Give the chance to create a custom short URL
 
+https://www.youtube.com/watch?v=fMZMm_0ZhK4

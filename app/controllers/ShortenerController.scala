@@ -22,6 +22,9 @@ class ShortenerController @Inject()(cc: ControllerComponents, resourceHandler: U
   //  }
 
   private val logger = Logger(getClass)
+  def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
+    Ok(views.html.index())
+  }
 
   def create_short_url: Action[AnyContent] = Action { implicit request =>
     logger.debug(s"$request ${request.body}")

@@ -29,7 +29,7 @@ class RedisUrlRepository extends UrlRepository {
     logger.debug(s"Key =  $key value = $value")
     clients.withClient(_.setnx(key, value)) // redis set if not exists (no duplicates)
     // setting ttl of 100 my default
-    clients.withClient(_.expire(key, 100))
+    clients.withClient(_.expire(key, 1000))
   }
 
 
